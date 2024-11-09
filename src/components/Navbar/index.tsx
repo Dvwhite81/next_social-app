@@ -4,7 +4,7 @@ import NotificationsBtn from './NotificationsBtn';
 
 export default function Navbar() {
   return (
-    <header className="flex h-[15vh] justify-between p-4 bg-[--dark-blue]">
+    <header className="flex h-[--nav-height] justify-between p-4 bg-[--dark-blue]">
       <LogoDropdown />
       <div className="flex items-center gap-4">
         <NavSearch />
