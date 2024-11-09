@@ -26,7 +26,7 @@ export default function NavSearch() {
         )}
       </div>
       {isActive && (
-        <div className="absolute top-20 -left-12 h-[--main-height] w-72 p-4 border-solid border-2 border-[--dark-blue] rounded-md">
+        <div className="absolute top-20 -left-12 h-[--main-height] w-72 p-4 rounded-md shadow-[--dark-blue] shadow-lg text-[--dark-blue]">
           <h4>Recent</h4>
           <div className="flex flex-col items-center justify-center h-4/5">
             <p>No recent searches.</p>
