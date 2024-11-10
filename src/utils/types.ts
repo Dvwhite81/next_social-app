@@ -8,10 +8,16 @@ export type NavIconType = {
   extraIcons?: NavIconType[];
 };
 
+export type UserType = {
+  id: number;
+  username: string;
+  is_verified: boolean;
+};
+
 export type PostType = {
   id: number;
   content: string;
   imageUrl: string;
-  author: string;
+  author: UserType;
   created_at: Date;
 };

@@ -6,7 +6,7 @@ import { TbPhotoVideo } from 'react-icons/tb';
 import { RiApps2AddLine } from 'react-icons/ri';
 import { TbSend } from 'react-icons/tb';
 import { IoIosSend } from 'react-icons/io';
-import { NavIconType } from '@/utils/types';
+import { NavIconType, UserType } from '@/utils/types';
 import { PostType } from './types';
 
 export const ICONS: NavIconType[] = [
@@ -56,12 +56,30 @@ export const ICONS: NavIconType[] = [
   },
 ];
 
+export const USERS: UserType[] = [
+  {
+    id: 1,
+    username: 'joebonamassa',
+    is_verified: true,
+  },
+  {
+    id: 2,
+    username: 'terriblejohnny',
+    is_verified: false,
+  },
+  {
+    id: 3,
+    username: 'paulgilbert_official',
+    is_verified: true,
+  },
+];
+
 export const POSTS: PostType[] = [
   {
     id: 1,
     content: 'Thank you for the warm welcome so far Reno. 😎👍',
     imageUrl: '/1.png',
-    author: 'joebonamassa',
+    author: USERS[0],
     created_at: new Date('January 1 2024'),
   },
   {
@@ -69,7 +87,7 @@ export const POSTS: PostType[] = [
     content:
       'everyone’s got to face down the demons, but maybe today you can put the past away',
     imageUrl: '/2.png',
-    author: 'terriblejohnny',
+    author: USERS[1],
     created_at: new Date('October 31 2024'),
   },
   {
@@ -77,7 +95,7 @@ export const POSTS: PostType[] = [
     content:
       'If you build it, they will come. @jimdunlopusa @jhspedals @jampedals @officialibanezguitars @bossinfoglobal @suprousa @catalinbread @voodoolabofficial @dimarzioinc',
     imageUrl: '/3.png',
-    author: 'paulgilbert_official',
+    author: USERS[2],
     created_at: new Date('Nov 9 2024 23:17:46'),
   },
 ];

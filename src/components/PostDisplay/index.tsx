@@ -8,7 +8,7 @@ export default function PostDisplay() {
       {POSTS.map((post) => (
         <Fragment key={post.id}>
           <SinglePost post={post} />
-          <hr className="rounded-md border-2 border-[--dark-blue]" />
+          <hr className="my-4 rounded-md border-2 border-[--dark-blue]" />
         </Fragment>
       ))}
     </div>
