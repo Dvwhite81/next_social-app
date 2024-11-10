@@ -8,7 +8,7 @@
   --dark-blue: #113f67;
   --light-blue: #87c0cd;
 
-  --nav-height: 15vh;
+  --nav-height: 12vh;
   --main-height: calc(100vh - (var(--nav-height) * 2));
 }
 

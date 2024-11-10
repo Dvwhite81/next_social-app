@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import BottomNav from '@/components/BottomNav';
+import TopNav from '@/components/TopNav';
+import 'react-tooltip/dist/react-tooltip.css';
 import './globals.css';
-import Navbar from '@/components/Navbar';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -27,10 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-[100vh] antialiased`}
       >
-        <Navbar />
-        {children}
+        <TopNav />
+        <main className="h-[--main-height] mt-[--nav-height]">{children}</main>
+        <BottomNav />
       </body>
     </html>
   );

@@ -10,9 +10,9 @@ export default function NotificationsBtn() {
   return (
     <button type="button" onClick={toggleClicked}>
       {clicked ? (
-        <FaHeart className="text-[1.4rem] text-[--light-blue] hover:scale-110" />
+        <FaHeart className="text-[1.4rem] text-[--light-blue] hover:scale-125" />
       ) : (
-        <FaRegHeart className="text-[1.4rem] text-white hover:scale-110" />
+        <FaRegHeart className="text-[1.4rem] text-white hover:scale-125" />
       )}
     </button>
   );
