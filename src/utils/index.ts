@@ -1,56 +1,23 @@
-import { PiHouse, PiHouseFill } from 'react-icons/pi';
-import { FaCompass, FaRegCompass } from 'react-icons/fa6';
-import { BiMoviePlay, BiSolidMoviePlay } from 'react-icons/bi';
-import { MdOutlineAddBox } from 'react-icons/md';
-import { TbPhotoVideo } from 'react-icons/tb';
-import { RiApps2AddLine } from 'react-icons/ri';
-import { TbSend } from 'react-icons/tb';
-import { IoIosSend } from 'react-icons/io';
-import { NavIconType } from '@/utils/types';
+export const getTimeSince = (created_at: Date) => {
+  const timeNow = new Date().getTime();
+  const timeCreated = new Date(created_at).getTime();
+  const minutesSince = Math.floor((timeNow - timeCreated) / 60000);
 
-export const icons: NavIconType[] = [
-  {
-    label: 'Home',
-    Icon: PiHouse,
-    ActiveIcon: PiHouseFill,
-    onClick: () => {},
-  },
-  {
-    label: 'Explore',
-    Icon: FaRegCompass,
-    ActiveIcon: FaCompass,
-    onClick: () => {},
-  },
-  {
-    label: 'Reels',
-    Icon: BiMoviePlay,
-    ActiveIcon: BiSolidMoviePlay,
-    onClick: () => {},
-  },
-  {
-    label: 'New post',
-    Icon: MdOutlineAddBox,
-    ActiveIcon: MdOutlineAddBox,
-    onClick: () => {},
-    extraIcons: [
-      {
-        label: 'Post',
-        Icon: TbPhotoVideo,
-        ActiveIcon: TbPhotoVideo,
-        onClick: () => {},
-      },
-      {
-        label: 'AI character',
-        Icon: RiApps2AddLine,
-        ActiveIcon: RiApps2AddLine,
-        onClick: () => {},
-      },
-    ],
-  },
-  {
-    label: 'Direct',
-    Icon: TbSend,
-    ActiveIcon: IoIosSend,
-    onClick: () => {},
-  },
-];
+  if (minutesSince < 60) {
+    return minutesSince > 1
+      ? `${minutesSince} mins ago`
+      : `${minutesSince} min ago`;
+  }
+
+  const hoursSince = Math.floor(minutesSince / 60);
+
+  if (hoursSince < 24) {
+    return hoursSince > 1
+      ? `${hoursSince} hours ago`
+      : `${hoursSince} hour ago`;
+  }
+
+  const daysSince = Math.floor(hoursSince / 24);
+
+  return daysSince > 1 ? `${daysSince} days ago` : `${daysSince} day ago`;
+};

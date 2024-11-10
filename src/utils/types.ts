@@ -7,3 +7,11 @@ export type NavIconType = {
   onClick: () => void;
   extraIcons?: NavIconType[];
 };
+
+export type PostType = {
+  id: number;
+  content: string;
+  imageUrl: string;
+  author: string;
+  created_at: Date;
+};

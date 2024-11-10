@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-[100vh] antialiased`}
       >
         <TopNav />
-        <main className="h-[--main-height] mt-[--nav-height]">{children}</main>
+        <main className="h-[--main-height] my-[--nav-height]">{children}</main>
         <BottomNav />
       </body>
     </html>

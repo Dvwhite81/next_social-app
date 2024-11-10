@@ -35,7 +35,7 @@ export default function LogoDropdown() {
       {dropdownOpen && (
         <>
           <div className="h-2" />
-          <div className="border-solid border-[--dark-blue] border-2 rounded-md">
+          <div className="bg-white border-solid border-[--dark-blue] border-2 rounded-md">
             <ul>
               <NavDropdownItem label="Following" Icon={SlPeople} />
               <hr className="text-[--dark-blue] border-solid border-t-2 border-[--dark-blue]" />

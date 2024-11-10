@@ -1,16 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { icons } from '@/utils';
+import { ICONS } from '@/utils/data';
 import NavIcon from './NavIcon';
 
 export default function BottomNav() {
-  const [activeIcon, setActiveIcon] = useState(icons[0]);
+  const [activeIcon, setActiveIcon] = useState(ICONS[0]);
   const [newPostIsOpen, setNewPostIsOpen] = useState(false);
 
   return (
     <footer className="fixed bottom-0 bg-white flex h-[--nav-height] w-full items-center justify-around">
-      {icons.map((icon) => (
+      {ICONS.map((icon) => (
         <NavIcon
           key={icon.label}
           icon={icon}
