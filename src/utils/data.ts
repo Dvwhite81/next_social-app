@@ -1,15 +1,16 @@
-import { PiHouse, PiHouseFill } from 'react-icons/pi';
-import { FaCompass, FaRegCompass } from 'react-icons/fa6';
 import { BiMoviePlay, BiSolidMoviePlay } from 'react-icons/bi';
+import { FaCompass, FaRegCompass, FaHeart, FaRegHeart } from 'react-icons/fa6';
+import { IoIosMenu, IoIosSend } from 'react-icons/io';
+import { IoMenu, IoSearchOutline, IoSearchSharp } from 'react-icons/io5';
 import { MdOutlineAddBox } from 'react-icons/md';
-import { TbPhotoVideo } from 'react-icons/tb';
+import { PiHouse, PiHouseFill } from 'react-icons/pi';
 import { RiApps2AddLine } from 'react-icons/ri';
-import { TbSend } from 'react-icons/tb';
-import { IoIosSend } from 'react-icons/io';
+import { TbPhotoVideo, TbSend } from 'react-icons/tb';
+
 import { NavIconType, UserType } from '@/utils/types';
 import { PostType } from './types';
 
-export const ICONS: NavIconType[] = [
+export const NAV_ICONS: NavIconType[] = [
   {
     label: 'Home',
     Icon: PiHouse,
@@ -52,6 +53,77 @@ export const ICONS: NavIconType[] = [
     label: 'Direct',
     Icon: TbSend,
     ActiveIcon: IoIosSend,
+    onClick: () => {},
+  },
+  {
+    label: 'More',
+    Icon: IoIosMenu,
+    ActiveIcon: IoMenu,
+    onClick: () => {},
+  },
+];
+
+export const SIDE_ICONS: NavIconType[] = [
+  {
+    label: 'Home',
+    Icon: PiHouse,
+    ActiveIcon: PiHouseFill,
+    onClick: () => {},
+  },
+  {
+    label: 'Search',
+    Icon: IoSearchOutline,
+    ActiveIcon: IoSearchSharp,
+    onClick: () => {},
+  },
+  {
+    label: 'Explore',
+    Icon: FaRegCompass,
+    ActiveIcon: FaCompass,
+    onClick: () => {},
+  },
+  {
+    label: 'Reels',
+    Icon: BiMoviePlay,
+    ActiveIcon: BiSolidMoviePlay,
+    onClick: () => {},
+  },
+  {
+    label: 'Direct',
+    Icon: TbSend,
+    ActiveIcon: IoIosSend,
+    onClick: () => {},
+  },
+  {
+    label: 'Notifications',
+    Icon: FaRegHeart,
+    ActiveIcon: FaHeart,
+    onClick: () => {},
+  },
+  {
+    label: 'Create',
+    Icon: MdOutlineAddBox,
+    ActiveIcon: MdOutlineAddBox,
+    onClick: () => {},
+    extraIcons: [
+      {
+        label: 'Post',
+        Icon: TbPhotoVideo,
+        ActiveIcon: TbPhotoVideo,
+        onClick: () => {},
+      },
+      {
+        label: 'AI character',
+        Icon: RiApps2AddLine,
+        ActiveIcon: RiApps2AddLine,
+        onClick: () => {},
+      },
+    ],
+  },
+  {
+    label: 'More',
+    Icon: IoIosMenu,
+    ActiveIcon: IoMenu,
     onClick: () => {},
   },
 ];

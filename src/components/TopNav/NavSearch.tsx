@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
-import { FaSearch } from 'react-icons/fa';
+import { IoSearchOutline } from 'react-icons/io5';
 
 export default function NavSearch() {
   const [isActive, setIsActive] = useState(false);
@@ -9,7 +9,7 @@ export default function NavSearch() {
     <div className="relative">
       <div className="relative flex">
         {!isActive && (
-          <FaSearch className="absolute left-2 top-3 text-gray-400" />
+          <IoSearchOutline className="absolute left-2 top-3 text-gray-400" />
         )}
         <input
           className="rounded-xl h-fit p-2 focus:outline-none focus:ring-0"

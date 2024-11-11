@@ -4,6 +4,7 @@ import BottomNav from '@/components/BottomNav';
 import TopNav from '@/components/TopNav';
 import 'react-tooltip/dist/react-tooltip.css';
 import './globals.css';
+import SideNav from '@/components/SideNav';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -29,10 +30,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-[100vh] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex sm:flex-col min-h-[100vh] antialiased`}
       >
         <TopNav />
-        <main className="h-[--main-height] my-[--nav-height]">{children}</main>
+        <SideNav />
+        <main className="h-[--main-height] my-[--nav-height] md:w-4/5 md:ml-[20%] md:my-2">
+          {children}
+        </main>
         <BottomNav />
       </body>
     </html>
